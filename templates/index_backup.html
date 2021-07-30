@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+   
+    <!-- Styling -->
+    <style>
+        body, html {
+            height: 100%;
+            width:  100%;
+        }
+	.bg {
+
+            background-image: linear-gradient(to right, #d4d2d6 , #9c8aab);
+	    height: 100%;
+            width:100%;
+            background-position: left;
+            background-size: cover;
+        }
+        #element1 {display:inline-block;margin-right:30px;height:100px; width:180px;} 
+        #element2 {display:inline-block;margin-right:30px;height:100px; width:170px; }
+        #element3 {display:inline-block;margin-right:30px;height:100px;width:250px;}
+    </style>
+</head>
+<center>
+<body class="bg">
+    <div class="container">
+        
+        <div class="column">
+            <div class="row-md-4 offset-md-1" style="margin: doted;background-image: linear-gradient(to left, #a69fa4, #70827e); padding: 50px; box-shadow: 25px 20px 5px #888; text-align: left;" >
+                <div style="background-image: linear-gradient(to left, rgba(55,255,255,1), rgba(240,0,0,1))">
+                <b>
+                <font size="+5">
+                 Marketing Work
+                </font>
+                </b>
+                </div>
+                
+		<form action="/get_image" method="post" enctype="multipart/form-data">
+                    <font size="+2" >                   
+                    Text
+                    </font>
+		    <textarea placeholder="Enter your text here" id="status" name="status" class="form-control"></textarea>
+                    <h4>Input Image</h4>
+		    <input type="file" id="media" name="media" accept="image/*" class="form-control">
+
+             <div class="row">
+
+                    <div id="element1" ><h4>LayOver Style</h4>
+                          <select name="colors" id="colors" style="border-radius: 5px;"class=" form-control">
+                                <option value="solid">solid color</option>
+                                <option value="gradient">gradient color</option>
+                                <option value="centere">centered carosal</option>
+			  </select>		
+                    </div>		
+			<div id="element2"><h4>Position</h4>
+                        
+                            <select name="option_box" id="option_box" style="border-radius: 5px;"class=" form-control">
+                                <option value="left" selected="selected" >Left</option>
+                                <option value="upper">Upper</option>
+                                <option value="right">Right</option>
+                                <option value="center">Center</option>
+                                <option value="bottom">Bottom</option>
+			    </select>
+                        </div>
+                            <div id="element2">
+                            <label for="opacity"><h4>Opacity</h4></label>
+		            <input type="float" name="opacity" value="0.5" style="border-radius: 5px; border-spacing: 250px;column-gap: 40px;" class=" form-control">
+		          </div>
+                     <div id ="element3"><h4>Text Align Position</h4>
+                            <select name="option_boxx" id="option_boxx" style="border-radius: 5px;"class=" form-control">
+                                <option value="left">Left</option>
+                                <option value="right">Right</option>
+                                <option value="center">Center</option>
+                            </select>
+                        </div>
+		    </div>
+		    <div class="col-md-12">
+                    <div><h4>Colors</h4></div>
+                    
+                    <div id="element1">                                               
+                    <label>First Color (For Solid)</label>
+
+                     <input type="color" style="height: 60px;width: 70px;" name="first" class="form-control" value="#005F00">
+                    </div>
+
+                    <div id="element1">
+		    <label>Second Color (For Gradient Add This Color)</label>
+		     <input type="color" style="height: 60px;width: 70px;" name="second" class="form-control" value="#23570F">
+		    </div>
+
+                        <div><h4>Text Colors</h4></div>
+                        <div id="element1">
+                            <label for="color">Color</label><br>
+                            <input type="color" style="height: 60px;width: 70px;" name="color" class="form-control" value="#FFFFFF">
+                        </div>
+                        <div id="element1">
+                            <label for="shadowcolor">Shadow Color</label><br>
+			    <input type="color" style="height: 60px;width: 70px;" name="shadowcolor" class="form-control" value="#000000">
+                        </div>
+                        <div id="element1">
+                        <label for="fontsize">Font Size</label><br>
+                        <input type=int name="fontsize" value="35" style="border-radius: 5px; border-spacing: 250px;column-gap: 40px;" class=" form-control"> 
+                        </div>
+		    <center>
+                          
+                     <div class="col-5">
+                            
+                            <br>
+                            <h4>Download and View</h4>
+                          
+                            <select name="option_boxxx" id="option_boxxx" style="border-radius: 5px;"class=" form-control">
+                                <option value="view">View</option>
+                                <option value="download">Download</option>
+                            </select>
+			<br>
+                        </center>
+                        </div >
+                     <div  style="background-image: linear-gradient(to right,white, red,orange,green,blue,indigo,violet)">
+
+		    <button name="end" type="submit" style="border-radius: 50px; " class="btn btn-lg btn-block btn-outline-success">Generate Image &#127748;</button>
+                    </div>
+ 
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</center>
+</body>
+</html>

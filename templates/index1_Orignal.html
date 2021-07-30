@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <!-- Styling -->
+    <style>
+        body, html {
+            height: 100%;
+            width:  100%;
+        }
+	.bg {
+
+            background-image: linear-gradient(to right, cyan , red);
+	    height: 100%;
+            width:100%;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<center>
+<body class="bg">
+    <div class="container">
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-6 offset-md-3" style="margin: auto; background: white; padding: 50px; box-shadow: 10px 10px 5px #888;">
+                <div class="panel-heading">
+                    <h1>Marketing Work</h1>
+                </div>
+                <hr>
+		<form action="/get_image" method="post" enctype="multipart/form-data">
+     
+                    <h4>Input Image</h4>
+		    <input type="file" id="media" name="media" accept="image/*" class="form-control"><br>
+                    <h4>CSV file for Centered style <h4>
+                    <input type="file" id="filess" name="filess" accept="file/*" class="form-control"><br>
+                    <div class='col-10'>
+                           <center> 
+              <h4>with digit and without digit</h4><br>
+                          <select name="option_boxxx" id="option_boxxx" style="border-radius: 0px;"class=" form-control">
+
+                                <option value="1">With Digit</option>
+                                <option value="2">Without digit</option>
+                                
+
+                        </select>
+                          </center>
+                     </div>
+
+
+		    <button name="end" type="submit" style="border-radius: 10px; " class="btn btn-lg btn-block btn-outline-success">Generate Image</button><br>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</center>
+</body>
+</html>
+

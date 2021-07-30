@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <!-- Styling -->
+    <style>
+        body, html {
+            height: 100%;
+            width:  100%;
+        }
+	.bg {
+
+            background-image: linear-gradient(to right, cyan , red);
+	    height: 100%;
+            width:100%;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<center>
+<body class="bg">
+    <div class="container">
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-6 offset-md-3" style="margin: auto; background: white; padding: 50px; box-shadow: 10px 10px 5px #888;">
+                <div class="panel-heading">
+                    <h1>Marketing Work</h1>
+                </div>
+                <hr>
+		<form action="/get_image" method="post" enctype="multipart/form-data">
+                    <h4>Text</h4>
+		    <textarea name="status" id="status" class="form-control"></textarea><br>
+                    <h4>Input Image</h4>
+		    <input type="file" id="media" name="media" accept="image/*" class="form-control"><br>
+
+
+
+
+                    <h4>Opacity</h4>
+		    <input type="float" name="fontsize" value="1.0" style="border-radius: 0px;" class="form-control"><br>
+		    
+		    <div class="row">
+
+		    <div class='col-11'>
+                           <center> 
+			  <h4>Layover Style & Position</h4><br>
+                          <select name="colors" id="colors" style="border-radius: 0px;"class=" form-control">
+
+                                <option value="solid">solid color</option>
+                                <option value="gradient">gradient color</option>
+                                <option value="centere">centered carosal</option>
+
+			  </select>
+                          </center>
+                        </div>
+			<div class="col-12">
+                        
+                            <select name="option_box" id="option_box" style="border-radius: 0px;"class=" form-control">
+                                <option value="left" selected="selected" >Left</option>
+                                <option value="upper">Upper</option>
+                                <option value="right">Right</option>
+                                <option value="center">Center</option>
+                                <option value="bottom">Bottom</option>
+			    </select>
+			</div>
+                     <div class="col-13">
+                            <h4>Position for text align</h4> 
+                            <select name="option_boxx" id="option_boxx" style="border-radius: 0px;"class=" form-control">
+                                <option value="left">Left</option>
+                                <option value="right">Right</option>
+                                <option value="center">Center</option>
+                            </select>
+                        </div>
+		    </div>
+		    <br>
+		    <div class="col-md-12"><br>
+                     <center> 
+                    <h4>Colors for Gradients</h4><br>
+                                                        
+                    <label>First Color</label><br>
+
+                     <input type="color" style="height: 50px;" name="first" class="form-control" value="#005F00"><br>
+
+		    <label>Second Color</label>
+		     <input type="color" style="height: 50px;" name="second" class="form-control" value="#23570F"><br>
+		    </center>
+                    </div>
+		    <div class="col-md-12"><br>
+                    <center>
+                    <h4>Colors for Solid Layover </h4>
+
+                    <label for="solidcolorr">Solid Color</label><br>
+
+                    <input type="color" style="height: 50px;" name="solidcolorr" class="form-control" value="#40043d"><br>
+                    </center>
+                    </div>
+		    <div class="row"> 
+             
+                        <h4> Text Color </h4>
+                        <div class="col-md-12">
+                            <label for="color">Color</label><br>
+                            <input type="color" style="height: 50px;" name="color" class="form-control" value="#FFFFFF">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="shadowcolor">Shadow Color</label><br>
+			    <input type="color" style="height: 50px;" name="shadowcolor" class="form-control" value="#000000">
+                        </div>
+		    <br>
+                     <div class="col-15">
+                            <h4>Download and View</h4>
+                            <select name="option_boxxx" id="option_boxxx" style="border-radius: 0px;"class=" form-control">
+                                <option value="view">View</option>
+                                <option value="download">Download</option>
+                            </select>
+                        </div>
+
+		    <button name="end" type="submit" style="border-radius: 10px; " class="btn btn-lg btn-block btn-outline-success">Generate Image</button><br>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</center>
+</body>
+</html>
